@@ -1,0 +1,39 @@
+// @import '../../styles/variables';
+// @import '../../styles/mixins';
+
+@import '../../styles/main.scss';
+
+.section-heading-section {
+  background: color(header);
+  height: 5rem;
+  @include bottom-shadow;
+  @include flexCenter();
+}
+
+.total-budget-section {
+  height: 10rem;
+  background: color(text);
+  @include flexCenter();
+
+  .budget {
+    h1 {
+
+      &.success {
+        color: lighten(color(success), 10%);
+      }
+
+      &.error {
+        color: lighten(color(error), 10%);
+      }
+    }
+  }
+}
+
+.add-item-section {
+  @include flexCenter();
+  background: color(text);
+
+  .add-item-container {
+    width: 40rem;
+  }
+}

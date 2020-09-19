@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$budget-calculator-primary: mat-palette($mat-indigo);
+$budget-calculator-accent: mat-palette($mat-pink, A200, A100, A400);
+$budget-calculator-warn: mat-palette($mat-red);
+
+$budget-calculator-theme: mat-light-theme((
+  color: (
+    primary: $budget-calculator-primary,
+    accent: $budget-calculator-accent,
+    warn: $budget-calculator-warn,
+  )
+));
+
+@include angular-material-theme($budget-calculator-theme);

@@ -1,0 +1,37 @@
+// @import '../../styles/mixins';
+// @import '../../styles/variables';
+
+@import '../../styles/main.scss';
+
+.form-align {
+  @include flexCenter();
+  // justify-content: space-evenly;
+
+  .form-description, .form-amount {
+    margin-right: 2rem;
+  }
+
+  .form-description {
+    width: 22rem;
+  }
+
+  .form-amount {
+    width: 6rem;
+  }
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+::ng-deep .mat-form-field-invalid.ng-untouched
+    {
+      .mat-form-field-label {
+        color: rgba(0, 0, 0, 0.54) !important;
+      }
+
+      .mat-form-field-ripple {
+        background-color: rgba(0, 0, 0, 0.54) !important;
+      }
+    }

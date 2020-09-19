@@ -1,0 +1,21 @@
+
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // flex-direction: $direction;
+}
+
+// @include flexCenter(row/column)
+
+@mixin transition-multi($property1, $property2) {
+  transition: $property1 0.2s ease-out, $property2 0.2s ease-out;
+}
+
+@mixin transition-single($property1) {
+  transition: $property1 0.2s ease-out;
+}
+
+@mixin bottom-shadow {
+  box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.1);
+}

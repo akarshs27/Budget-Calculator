@@ -1,0 +1,42 @@
+@import '../../styles/main.scss';
+
+.budget-list-section {
+  padding-top: 2rem;
+  @include flexCenter();
+
+  .budget-list-container {
+    max-width: 40rem;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .income-column, .expense-column {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 0;
+      flex-grow: 1;
+
+      h2 {
+        color: color(dark);
+        font-size: 1.3rem;
+      }
+
+    }
+
+    .income-column {
+      margin-right: 3rem;
+
+      h2 {
+        color: color(success);
+      }
+    }
+
+    .expense-column {
+
+      h2 {
+        color: color(error);
+      }
+    }
+
+  }
+}

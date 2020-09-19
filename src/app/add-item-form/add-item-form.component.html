@@ -1,0 +1,17 @@
+<div>
+  <form class="form-align"  [formGroup]="itemForm" (ngSubmit)="submit()">
+
+        <mat-form-field class="form-description">
+            <mat-label>Description</mat-label>
+            <input matInput type="text" name="description" formControlName="description">
+        </mat-form-field>
+
+        <mat-form-field class="form-amount">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" name="amount" formControlName="amount">
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary" [disabled]="!itemForm.valid">{{ isNewItem ? "Add" : "Save" }}</button>
+
+  </form>
+</div>

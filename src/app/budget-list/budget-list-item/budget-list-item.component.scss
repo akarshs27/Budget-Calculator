@@ -1,0 +1,94 @@
+@import '../../../styles/main.scss';
+
+.card {
+  @include flexCenter();
+  margin-bottom: 0.5rem;
+  border: none;
+  position: relative;
+
+
+  &:hover {
+    .cross {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .cross {
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: color(cross);
+    background-image: url(../../../assets/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -0.75rem;
+    right: -0.75rem;
+    transform: scale(0);
+    transform-origin: center;
+    opacity: 0;
+    // @include transition-multi(opacity,transform);
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      background-color: darken(color(cross), 3%);
+      transform: scale(1.1);
+    }
+  }
+
+  .budget-card {
+    display: flex;
+    background-color: color(text);
+    width: 100%;
+    border-radius: 0.3rem;
+    padding: 0.6rem;
+    cursor: pointer;
+    @include transition-single(background-color);
+
+    &:hover {
+      background-color: darken(color(text), 2%);
+      // @include bottom-shadow;
+    }
+
+    .description {
+      display: flex;
+      flex-grow: 1;
+      margin-left: 0.3rem;
+      align-items: center;
+    }
+
+    .amount {
+      padding: 0.25rem;
+      border-radius: 0.2rem;
+
+      p {
+        padding: 0 0.2rem;
+      }
+    }
+
+  }
+
+  .income {
+    p {
+      color: color(success);
+    }
+    .amount {
+      background-color: lighten(color(success), 40%);
+    }
+  }
+
+  .expense {
+    p {
+      color: color(error);
+    }
+    .amount {
+      background-color: lighten(color(error), 30%);
+    }
+  }
+
+}
+
+p {
+  margin-bottom: 0 !important;
+}
