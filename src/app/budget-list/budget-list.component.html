@@ -1,0 +1,46 @@
+<section class="budget-list-section">
+  <div class="budget-list-container"
+      cdkDropListGroup>
+
+    <div class="income-column">
+      <h2>INCOME</h2>
+      <div
+      cdkDropList
+      [cdkDropListData]="budgetItem"
+      (cdkDropListDropped)="drop($event)">
+        <div
+          cdkDrag
+          [cdkDragData]="item"
+          *ngFor = "let item of budgetItem">
+          <app-budget-list-item
+            [item]="item"
+            *ngIf = "item.amount >= 0"
+             (itemDelete)="onDelete(item)"
+             (cardClick)="openModal(item)">
+          </app-budget-list-item>
+        </div>
+      </div>
+    </div>
+
+    <div class="expense-column">
+      <h2>EXPENSES</h2>
+        <div
+        cdkDropList
+        [cdkDropListData]="budgetItem"
+        (cdkDropListDropped)="drop($event)">
+          <div
+            cdkDrag
+            [cdkDragData]="item"
+            *ngFor = "let item of budgetItem">
+            <app-budget-list-item
+              [item]="item"
+              *ngIf = "item.amount < 0"
+              (itemDelete)="onDelete(item)"
+              (cardClick)="openModal(item)">
+            </app-budget-list-item>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</section>

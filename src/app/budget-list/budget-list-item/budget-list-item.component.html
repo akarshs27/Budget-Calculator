@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="budget-card" (click)="onCardClick()" [ngClass]="{ 'income': item.amount >=0, 'expense': item.amount < 0}">
+
+    <div class="description">
+      <p>{{item.description}}</p>
+    </div>
+
+    <div class="amount">
+      <p>{{item.amount}}</p>
+    </div>
+
+    <div class="cross" (click)="onDelete()"></div>
+
+  </div>
+</div>
