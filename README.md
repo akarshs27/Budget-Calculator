@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+[initial]: https://github.com/akarshs27/Budget-Calculator/blob/master/src/assets/empty.png
+[filled]: https://github.com/akarshs27/Budget-Calculator/blob/master/src/assets/filled.png
+[edit]: https://github.com/akarshs27/Budget-Calculator/blob/master/src/assets/edit.png
+[delete]: https://github.com/akarshs27/Budget-Calculator/blob/master/src/assets/delete.png
+
+![INITIAL][initial]
+![FILLED][filled]
+![EDIT][edit]
+![DELETE][delete]
